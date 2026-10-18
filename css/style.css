@@ -1,0 +1,648 @@
+
+
+/*  Main colours and fonts */
+:root {
+    --brown: #573b2d;
+    --dark-brown: #30231e;
+    --copper: #a96943;
+    --beige: #f4eee5;
+    --white: #fffdf9;
+    --text: #302722;
+    --muted: #76685e;
+    --border: #e4d7ca;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--white);
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.7;
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: "Playfair Display", serif;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 4.8rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 18px;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+p {
+    color: var(--muted);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navigation */
+
+.site-nav {
+    background-color: var(--dark-brown);
+    padding: 17px 0;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 1.45rem;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: #f8eee5 !important;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #edc59f !important;
+}
+
+.theme-button {
+    border: 1px solid #f0d4b9;
+    color: white;
+    margin-left: 8px;
+}
+
+.theme-button:hover {
+    background-color: var(--copper);
+    color: white;
+}
+
+/*  Homepage hero background */
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(35, 24, 18, 0.86),
+            rgba(35, 24, 18, 0.35)
+        ),
+        url("../images/hero-lesotho.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.hero h1 {
+    max-width: 750px;
+    margin: 15px 0;
+    color: white;
+}
+
+.hero-text {
+    max-width: 580px;
+    color: #f5e9df;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.eyebrow {
+    color: var(--copper);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+/*  Buttons */
+
+.btn {
+    border-radius: 4px;
+    padding: 11px 18px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.brown-button {
+    background-color: var(--brown);
+    color: white;
+    border: 1px solid var(--brown);
+}
+
+.brown-button:hover {
+    background-color: var(--copper);
+    color: white;
+    border-color: var(--copper);
+    transform: translateY(-2px);
+}
+
+.light-button {
+    color: white;
+    border: 1px solid white;
+    margin-left: 8px;
+}
+
+.light-button:hover {
+    color: var(--dark-brown);
+    background-color: white;
+}
+
+/*  General sections */
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.welcome-section {
+    padding: 80px 0;
+    background-color: var(--beige);
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 35px;
+}
+
+.section-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.wide-photo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--brown);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid var(--copper);
+    padding-bottom: 3px;
+}
+
+.text-link:hover {
+    color: var(--copper);
+}
+
+/*  Page banner backgrounds */
+
+.page-banner {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.page-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(38, 25, 18, 0.65);
+}
+
+.page-banner .container {
+    position: relative;
+    z-index: 1;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.page-banner h1 {
+    color: white;
+    max-width: 850px;
+}
+
+.page-banner p:not(.eyebrow) {
+    color: #f6e9df;
+    max-width: 650px;
+}
+
+.destinations-banner {
+    background-image: url("../images/destinations-banner.jpg");
+}
+
+.accommodation-banner {
+    background-image: url("../images/accommodation-banner.jpg");
+}
+
+.activities-banner {
+    background-image: url("../images/activities-banner.jpg");
+}
+
+.gallery-banner {
+    background-image: url("../images/gallery-banner.jpg");
+}
+
+.contact-banner {
+    background-image: url("../images/contact-banner.jpg");
+}
+
+/*  Cards */
+
+.site-card {
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.site-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(50, 30, 20, 0.12);
+}
+
+.site-card img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 24px;
+}
+
+.card-body h3 {
+    margin-bottom: 12px;
+}
+
+.card-body p {
+    font-size: 0.95rem;
+}
+
+.card-body .btn {
+    margin-top: 8px;
+}
+
+.small-label {
+    color: var(--copper);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.price {
+    color: var(--brown) !important;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/*  Informational cards */
+
+.info-card {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    height: 50%;
+}
+
+.info-card h3 {
+    color: var(--brown);
+}
+
+/*  Forms */
+
+.form-panel,
+.calculator-panel,
+.cart-panel {
+    padding: 28px;
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    box-shadow: 0 10px 28px rgba(50, 30, 20, 0.06);
+}
+
+.form-control,
+.form-select {
+    padding: 11px;
+    border: 1px solid #d5c5b6;
+    border-radius: 4px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--copper);
+    box-shadow: 0 0 0 0.2rem rgba(169, 105, 67, 0.15);
+}
+
+.form-message {
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.form-message.success {
+    color: #26713d;
+}
+
+.form-message.error {
+    color: #a13e2d;
+}
+
+/*  Destination filters */
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-button {
+    color: var(--brown);
+    background-color: transparent;
+    border: 1px solid var(--border);
+}
+
+.filter-button:hover,
+.filter-button.active {
+    color: white;
+    background-color: var(--brown);
+    border-color: var(--brown);
+}
+
+/*  Gallery */
+
+.gallery-image {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 1px solid var(--border);
+    background-color: white;
+    text-align: left;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.gallery-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery-image:hover img {
+    transform: scale(1.04);
+}
+
+.gallery-image span {
+    display: block;
+    padding: 12px;
+    font-weight: 700;
+    color: var(--brown);
+}
+
+.modal-photo {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+/* Shopping basket */
+
+.cart-panel h2 {
+    font-size: 1.8rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.cart-item button {
+    color: #9b4b32;
+    background: transparent;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    color: var(--brown);
+    font-size: 1.15rem;
+}
+
+/* Calculator */
+
+.calc-total {
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.calc-total strong {
+    color: var(--copper);
+    font-size: 1.5rem;
+}
+
+/*  Footer */
+
+.site-footer {
+    background-color: var(--dark-brown);
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+    color: #f0e2d6;
+}
+
+/*  Dark mode */
+
+body.dark-mode {
+    --white: #201a17;
+    --beige: #2b211c;
+    --text: #f6eee7;
+    --muted: #d0bfb1;
+    --border: #4d3b30;
+    background-color: var(--white);
+    color: var(--text);
+}
+
+body.dark-mode .site-card,
+body.dark-mode .info-card,
+body.dark-mode .form-panel,
+body.dark-mode .calculator-panel,
+body.dark-mode .cart-panel,
+body.dark-mode .gallery-image {
+    background-color: #2b211c;
+    color: var(--text);
+    border-color: var(--border);
+}
+
+body.dark-mode .gallery-image span,
+body.dark-mode .price,
+body.dark-mode .text-link {
+    color: #edc59f !important;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    color: var(--text);
+    background-color: #201a17;
+    border-color: #665040;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #b9a79a;
+}
+
+body.dark-mode .btn-outline-brown {
+    color: #edc59f;
+    border-color: #edc59f;
+
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding-top: 12px;
+    }
+
+    .nav-link {
+        padding: 8px 0;
+    }
+
+    .theme-button {
+        margin: 8px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        min-height: 540px;
+    }
+
+    .hero-content {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .section-padding,
+    .welcome-section {
+        padding: 55px 0;
+    }
+
+    .page-banner {
+        min-height: 290px;
+    }
+
+    .page-banner h1 {
+        font-size: 2.6rem;
+    }
+
+    .wide-photo {
+        height: 290px;
+    }
+
+    .site-card img {
+        height: 210px;
+    }
+
+    .form-panel,
+    .calculator-panel,
+    .cart-panel {
+        padding: 20px;
+    }
+
+    .light-button {
+        margin: 8px 0 0;
+    }
+}
+
+
+
+
+.travel-tips {
+    background-color: var(--page-background);
+}
+
+.travel-accordion {
+    max-width: 850px;
+    margin: 35px auto 0;
+}
+
+.travel-accordion .accordion-item {
+    margin-bottom: 12px;
+    border: 1px solid #ded5c7;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.travel-accordion .accordion-button {
+    padding: 20px 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    color: #242424;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+
+.travel-accordion .accordion-button:not(.collapsed) {
+    color: #8a682b;
+    background-color: #f5efe3;
+}
+
+/* Remove Bootstrap's default blue focus ring */
+.travel-accordion .accordion-button:focus {
+    border-color: var(--brand-gold);
+    box-shadow: 0 0 0 3px rgba(216, 180, 106, 0.2);
+}
+
+.travel-accordion .accordion-body {
+    padding: 20px 24px;
+    color: #555555;
+    line-height: 1.8;
+    background-color: #ffffff;
+}
+
+
+@media (max-width: 576px) {
+    .travel-accordion .accordion-button {
+        padding: 16px;
+        font-size: 0.95rem;
+    }
+
+    .travel-accordion .accordion-body {
+        padding: 16px;
+    }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Discover Lesotho/Activities </title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark site-nav">
+<div class="container">
+<a class="navbar-brand" href="index.html">Discover Lesotho</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Open navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="mainNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+<li class="nav-item"><a class="nav-link" href="accommodation.html">Accommodation</a></li>
+<li class="nav-item"><a class="nav-link active" href="activities.html">Activities</a></li>
+<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery & Shop</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+<li class="nav-item"><button id="themeToggle" class="btn btn-sm theme-button">Dark Mode</button></li>
+</ul>
+</div></div></nav>
+</header>
+
+<main>
+<section class="page-banner activities-banner">
+<div class="container">
+<p class="eyebrow">EXPERIENCE LESOTHO</p>
+<h1>Choose your adventure</h1>
+<p>Discover activities that let you experience the kingdom in different ways.</p>
+</div>
+</section>
+
+<section class="section-padding">
+<div class="container">
+<div class="section-heading">
+<h2>Activities to enjoy</h2>
+<p>Explore the outdoors and learn about Basotho culture.</p>
+</div>
+
+<div class="row g-4">
+<div class="col-md-6 col-lg-4">
+<article class="site-card">
+<img src="images/pony-trekking.jpg" alt="Pony trekking through the mountains">
+<div class="card-body">
+<h3>Pony trekking</h3>
+<p>Explore mountain trails on a Basotho pony with an experienced local guide.</p>
+<p class="price">Example: M 350 per person</p>
+<button class="btn brown-button activity-book" data-activity="Pony trekking">Enquire about activity</button>
+</div></article>
+</div>
+
+<div class="col-md-6 col-lg-4">
+<article class="site-card">
+<img src="images/hiking.jpg" alt="Hikers on a mountain trail">
+<div class="card-body">
+<h3>Guided hiking</h3>
+<p>Enjoy scenic walking routes and discover beautiful highland landscapes.</p>
+<p class="price">Example: M 250 per person</p>
+<button class="btn brown-button activity-book" data-activity="Guided hiking">Enquire about activity</button>
+</div></article>
+</div>
+
+<div class="col-md-6 col-lg-4">
+<article class="site-card">
+<img src="images/village.jpg" alt="Village in the Lesotho highlands">
+<div class="card-body">
+<h3>Cultural village visit</h3>
+<p>Learn about local traditions, everyday life and Basotho heritage.</p>
+<p class="price">Example: M 180 per person</p>
+<button class="btn brown-button activity-book" data-activity="Cultural village visit">Enquire about activity</button>
+</div></article>
+</div>
+</div>
+</div>
+</section>
+
+<section class="welcome-section">
+<div class="container">
+<div class="row g-5 align-items-center">
+<div class="col-lg-6">
+<h2>Calculate your activity cost</h2>
+<p>Select an activity and the number of people to calculate an estimated total.</p>
+
+<div class="calculator-panel">
+<label for="activityType" class="form-label">Choose an activity</label>
+<select id="activityType" class="form-select mb-3">
+<option value="350">Pony trekking — M 350</option>
+<option value="250">Guided hiking — M 250</option>
+<option value="180">Cultural village visit — M 180</option>
+</select>
+
+<label for="peopleCount" class="form-label">Number of people</label>
+<input type="number" id="peopleCount" class="form-control mb-3" min="1" max="30" value="2">
+
+<p class="calc-total">Estimated total: <strong id="activityTotal">M 700</strong></p>
+</div>
+</div>
+
+<div class="col-lg-6">
+<img src="images/maletsunyane.jpg" class="wide-photo" alt="Mountain scenery near Maletsunyane Falls">
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="site-footer"><div class="container"><p>© 2026 Discover Lesotho</p></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discover Lesotho/Contact and Booking</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark site-nav">
+<div class="container">
+<a class="navbar-brand" href="index.html">Discover Lesotho</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Open navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="mainNav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+<li class="nav-item"><a class="nav-link" href="accommodation.html">Accommodation</a></li>
+<li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
+<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery & Shop</a></li>
+<li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+<li class="nav-item"><button id="themeToggle" class="btn btn-sm theme-button">Dark Mode</button></li>
+</ul>
+</div></div></nav>
+</header>
+
+<main>
+<section class="page-banner contact-banner">
+<div class="container">
+<p class="eyebrow">LET'S PLAN YOUR JOURNEY</p>
+<h1>Contact and booking</h1>
+<p>Tell us about your trip and the experiences you are interested in.</p>
+</div>
+</section>
+
+<section class="section-padding">
+<div class="container">
+<div class="row g-5">
+<div class="col-lg-5">
+<p class="eyebrow">GET IN TOUCH</p>
+<h2>Let's plan something memorable</h2>
+
+
+<div class="info-card mb-3">
+<h3>Before your visit</h3>
+<p>Check your travel dates, transport options, accommodation and weather conditions.</p>
+</div>
+
+
+</div>
+
+<div class="col-lg-7">
+<form id="bookingForm" class="form-panel">
+<h2 class="mb-4">Book your expirience</h2>
+
+<div class="row g-3">
+<div class="col-md-6">
+<label for="fullName" class="form-label">Full name</label>
+<input type="text" id="fullName" class="form-control" required minlength="2" autocomplete="name">
+</div>
+
+<div class="col-md-6">
+<label for="email" class="form-label">Email address</label>
+<input type="email" id="email" class="form-control" required autocomplete="email">
+</div>
+
+<div class="col-md-6">
+<label for="phone" class="form-label">Phone number</label>
+<input type="tel" id="phone" class="form-control" required pattern="[0-9+() -]{7,20}" placeholder="+266 ...">
+</div>
+
+<div class="col-md-6">
+<label for="tripDate" class="form-label">Preferred travel date</label>
+<input type="date" id="tripDate" class="form-control" required>
+</div>
+
+<div class="col-md-6">
+<label for="destination" class="form-label">Destination or interest</label>
+<select id="destination" class="form-select" required>
+<option value="">Choose an option</option>
+<option>Maletsunyane Falls</option>
+<option>Katse Dam</option>
+<option>Ts'ehlanyane National Park</option>
+<option>Morija</option>
+<option>Pony trekking</option>
+<option>Guided hiking</option>
+<option>Cultural village visit</option>
+<option>Not sure yet</option>
+</select>
+</div>
+
+<div class="col-md-6">
+<label for="travellers" class="form-label">Number of travellers</label>
+<input type="number" id="travellers" class="form-control" min="1" max="30" value="2" required>
+</div>
+
+<div class="col-12">
+<label for="message" class="form-label">Message</label>
+<textarea id="message" class="form-control" rows="4" minlength="10" required placeholder="Tell us about the trip you would like to plan."></textarea>
+</div>
+
+<div class="col-12">
+<div class="form-check">
+<input type="checkbox" id="agree" class="form-check-input" required>
+<label for="agree" class="form-check-label">
+I confirm that the information provided is accurate and agree to be contacted about my trip enquiry.
+</label>
+</div>
+</div>
+
+<div class="col-12">
+<div id="bookingMessage" class="form-message" role="status" aria-live="polite"></div>
+<button type="submit" class="btn brown-button">Submit enquiry</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="site-footer"><div class="container"><p>© 2026 Discover Lesotho</p></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
